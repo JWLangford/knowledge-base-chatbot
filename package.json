@@ -1,0 +1,19 @@
+{
+  "name": "knowledge-base-chatbot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node -r dotenv/config index.js"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^0.0.14",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "langchain": "^0.0.69"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
