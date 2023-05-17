@@ -47,6 +47,8 @@ yarn start
 
 `POST /chat`
 
+Chat takes a question and returns an answer and a list of source documents.
+
 #### Request Body Parameters
 | Name  |  Type | Required | Description |
 | ------------- | ------------- | ------------- | ------------- |
@@ -57,5 +59,20 @@ yarn start
 | ------------- | ------------- | ------------- | 
 | text  | string  | the answer for your question |
 | sourceDocuments  | array  | a list of the source documents considered when the API was fomrulating an anser |
+
+`POST /load-files`
+
+Load files takes all the files in the `dir` folder and saves them to a Pinecone Vector Store index.
+
+`POST /load-repository`
+
+Load repository takes a url and optional base branch. Every file in the repo will be loaded into the Pinecone Vector Store.
+
+#### Request Body Parameters
+| Name  |  Type | Required | Description |
+| ------------- | ------------- | ------------- | ------------- |
+| url  | string  | True | the github repo url |
+| branch  | string  | False | optional base branch. Defaults to 'master' |
+
    
    [node.js]: <http://nodejs.org>
